@@ -51,6 +51,19 @@ public class Document {
         texte = partieGauche + partie.toLowerCase() + partieDroite;
     }
 
+    public void inserer(int place, String ajout){
+        if(place==0){
+            String textegarde=texte;
+            this.clear();
+            texte=ajout+textegarde;
+        }
+        else {
+            String partiegauche = texte.substring(0,place);
+            String partiedroite = texte.substring(place);
+            texte=partiegauche+ajout+partiedroite;
+        }
+    }
+
 
 
     @Override

@@ -23,6 +23,7 @@ public class CommandeFactory {
             case "majuscules" : return new CommandeMajuscules(document, parameters);
             case "effacer" : return new CommandeEffacer(document, parameters);
             case "clear" : return new CommandeEffacer(document, parameters);
+            case "inserer" : return new Commandeinserer(document,parameters);
             case "minuscule" : return new CommandeMinuscule(document,parameters);
             default: return null;
         }
