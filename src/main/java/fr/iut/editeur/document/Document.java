@@ -26,12 +26,21 @@ public class Document {
         texte = partieGauche + remplacement + partieDroite;
     }
 
+
+    public void effacer(int debut, int fin) {
+        String partieGauche = texte.substring(0, debut);
+        String partieDroite = texte.substring(fin + 1);
+        texte = partieGauche + partieDroite;
+    }
+
     public void majuscules(int debut, int fin) {
         String partieGauche = texte.substring(0, debut);
         String partieDroite = texte.substring(fin + 1);
         String partie = texte.substring(debut, fin);
         texte = partieGauche + partie.toUpperCase() + partieDroite;
     }
+
+
 
     @Override
     public String toString() {
