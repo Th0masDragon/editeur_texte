@@ -40,6 +40,10 @@ public class Document {
         texte = partieGauche + partie.toUpperCase() + partieDroite;
     }
 
+    public void clear() {
+        texte = "";
+    }
+
 
 
     @Override
