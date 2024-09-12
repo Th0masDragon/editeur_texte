@@ -46,14 +46,14 @@ public class Document {
 
     public void inserer(int place, String ajout){
         if(place==0){
-            String textegarde=texte;
+            String textegarde=texteDocument;
             this.clear();
-            texte=ajout+textegarde;
+            texteDocument=ajout+textegarde;
         }
         else {
-            String partiegauche = texte.substring(0,place);
-            String partiedroite = texte.substring(place);
-            texte=partiegauche+ajout+partiedroite;
+            String partiegauche = texteDocument.substring(0,place);
+            String partiedroite = texteDocument.substring(place);
+            texteDocument=partiegauche+ajout+partiedroite;
         }
     }
 
