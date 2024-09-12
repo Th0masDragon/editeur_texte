@@ -1,7 +1,12 @@
 package fr.iut.editeur.document;
-
+/**
+ * classe Document, elle contient les choses
+ */
 public class Document {
 
+    /**
+     * TexteDocument est le texte du document en 1 big string
+     */
     private String texteDocument;
 
     public Document() {
@@ -20,6 +25,13 @@ public class Document {
         this.texteDocument += texte;
     }
 
+    /**
+     * Description de la méthode
+     * @param debut indice du début du remplacement
+     * @param fin indice de la fin du remplacement
+     * @param remplacement ce que l'on veut mettre
+     * @return void, on fait juste le remplacement
+     */
     public void remplacer(int debut, int fin, String remplacement) {
         String partieGauche = texteDocument.substring(0, debut);
         String partieDroite = texteDocument.substring(fin + 1);
