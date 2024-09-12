@@ -2,65 +2,65 @@ package fr.iut.editeur.document;
 
 public class Document {
 
-    private String texte;
+    private String contentDocument;
 
     public Document() {
-        this.texte = "";
+        this.contentDocument = "";
     }
 	
-    public String getTexte() {
-        return texte;
+    public String getContentDocument() {
+        return contentDocument;
     }
 
-    public void setTexte(String texte) {
-        this.texte = texte;
+    public void setContentDocument(String contentDocument) {
+        this.contentDocument = contentDocument;
     }
 
     public void ajouter(String texte) {
-        this.texte += texte;
+        this.contentDocument += texte;
     }
 
     public void remplacer(int debut, int fin, String remplacement) {
-        String partieGauche = texte.substring(0, debut);
-        String partieDroite = texte.substring(fin + 1);
-        texte = partieGauche + remplacement + partieDroite;
+        String partieGauche = contentDocument.substring(0, debut);
+        String partieDroite = contentDocument.substring(fin + 1);
+        contentDocument = partieGauche + remplacement + partieDroite;
     }
 
 
     public void effacer(int debut, int fin) {
-        String partieGauche = texte.substring(0, debut);
-        String partieDroite = texte.substring(fin + 1);
-        texte = partieGauche + partieDroite;
+        String partieGauche = contentDocument.substring(0, debut);
+        String partieDroite = contentDocument.substring(fin + 1);
+        contentDocument = partieGauche + partieDroite;
     }
 
     public void majuscules(int debut, int fin) {
-        String partieGauche = texte.substring(0, debut);
-        String partieDroite = texte.substring(fin + 1);
-        String partie = texte.substring(debut, fin);
-        texte = partieGauche + partie.toUpperCase() + partieDroite;
+        String partieGauche = contentDocument.substring(0, debut);
+        String partieDroite = contentDocument.substring(fin + 1);
+        String partie = contentDocument.substring(debut, fin);
+        contentDocument = partieGauche + partie.toUpperCase() + partieDroite;
     }
 
     public void clear() {
-        texte = "";
+        contentDocument = "";
     }
 
     public void minuscule(int debut, int fin){
-        String partieGauche = texte.substring(0, debut);
-        String partieDroite = texte.substring(fin + 1);
-        String partie = texte.substring(debut, fin);
-        texte = partieGauche + partie.toLowerCase() + partieDroite;
+        String partieGauche = contentDocument.substring(0, debut);
+        String partieDroite = contentDocument.substring(fin + 1);
+        String partie = contentDocument.substring(debut, fin);
+        contentDocument = partieGauche + partie.toLowerCase() + partieDroite;
     }
 
     public void inserer(int place, String ajout){
         if(place==0){
-            String textegarde=texte;
+            String textegarde= contentDocument;
             this.clear();
-            texte=ajout+textegarde;
+            contentDocument =ajout+textegarde;
         }
         else {
-            String partiegauche = texte.substring(0,place);
-            String partiedroite = texte.substring(place);
-            texte=partiegauche+ajout+partiedroite;
+            String partiegauche = contentDocument.substring(0,place);
+            String partiedroite = contentDocument.substring(place);
+            contentDocument =partiegauche+ajout+partiedroite;
         }
     }
 
@@ -68,6 +68,6 @@ public class Document {
 
     @Override
     public String toString() {
-        return this.texte;
+        return this.contentDocument;
     }
 }
