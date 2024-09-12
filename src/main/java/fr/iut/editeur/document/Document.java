@@ -2,52 +2,52 @@ package fr.iut.editeur.document;
 
 public class Document {
 
-    private String texte;
+    private String texteDocument;
 
     public Document() {
-        this.texte = "";
+        this.texteDocument = "";
     }
 	
     public String getTexte() {
-        return texte;
+        return texteDocument;
     }
 
     public void setTexte(String texte) {
-        this.texte = texte;
+        this.texteDocument = texte;
     }
 
     public void ajouter(String texte) {
-        this.texte += texte;
+        this.texteDocument += texte;
     }
 
     public void remplacer(int debut, int fin, String remplacement) {
-        String partieGauche = texte.substring(0, debut);
-        String partieDroite = texte.substring(fin + 1);
-        texte = partieGauche + remplacement + partieDroite;
+        String partieGauche = texteDocument.substring(0, debut);
+        String partieDroite = texteDocument.substring(fin + 1);
+        texteDocument = partieGauche + remplacement + partieDroite;
     }
 
 
     public void effacer(int debut, int fin) {
-        String partieGauche = texte.substring(0, debut);
-        String partieDroite = texte.substring(fin + 1);
-        texte = partieGauche + partieDroite;
+        String partieGauche = texteDocument.substring(0, debut);
+        String partieDroite = texteDocument.substring(fin + 1);
+        texteDocument = partieGauche + partieDroite;
     }
 
     public void majuscules(int debut, int fin) {
-        String partieGauche = texte.substring(0, debut);
-        String partieDroite = texte.substring(fin + 1);
-        String partie = texte.substring(debut, fin);
-        texte = partieGauche + partie.toUpperCase() + partieDroite;
+        String partieGauche = texteDocument.substring(0, debut);
+        String partieDroite = texteDocument.substring(fin + 1);
+        String partie = texteDocument.substring(debut, fin);
+        texteDocument = partieGauche + partie.toUpperCase() + partieDroite;
     }
 
     public void clear() {
-        texte = "";
+        texteDocument = "";
     }
 
 
 
     @Override
     public String toString() {
-        return this.texte;
+        return this.texteDocument;
     }
 }
